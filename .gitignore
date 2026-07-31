@@ -26,8 +26,6 @@ uploads/*
 !uploads/.gitkeep
 reports/*
 !reports/.gitkeep
-screenshots/*
-!screenshots/.gitkeep
 
 # IDE
 .vscode/
