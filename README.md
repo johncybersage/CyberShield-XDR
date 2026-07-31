@@ -274,8 +274,11 @@ Raj(John) K
 Cybersecurity Engineering Student | Full-Stack Developer | AI & Cloud Security Enthusiast
 
 🔗 GitHub: https://github.com/johncybersage
+
 💼 LinkedIn: https://www.linkedin.com/in/raj-k-cybersec/
+
 📧 Email: johnraj.kse@gmail.com
+
 Built with ❤️ for cybersecurity education and research.
 
 
