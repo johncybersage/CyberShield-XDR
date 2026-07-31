@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    --background: 222 47% 7%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 9%;
+    --card-foreground: 210 40% 98%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --primary: 196 100% 50%;
+    --primary-foreground: 222 47% 7%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 196 100% 50%;
+    --accent-foreground: 222 47% 7%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --ring: 196 100% 50%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-dark-200 text-foreground font-sans;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2300ccff' fill-opacity='0.02'%3E%3Cpath d='M0 0h40v1H0zM0 0v40h1V0z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-dark-300;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-cyber-700 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-cyber-500;
+  }
+}
+
+@layer components {
+  /* Cyber card with subtle glow border */
+  .cyber-card {
+    @apply bg-dark-100 border border-cyber-900 rounded-lg p-4
+           shadow-lg shadow-cyber-900/20
+           hover:border-cyber-700 transition-colors duration-200;
+  }
+
+  /* Glowing text effect */
+  .text-glow {
+    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+  }
+
+  /* Threat severity badges */
+  .badge-critical { @apply bg-threat-critical/20 text-threat-critical border border-threat-critical/30; }
+  .badge-high     { @apply bg-threat-high/20 text-threat-high border border-threat-high/30; }
+  .badge-medium   { @apply bg-threat-medium/20 text-threat-medium border border-threat-medium/30; }
+  .badge-low      { @apply bg-threat-low/20 text-threat-low border border-threat-low/30; }
+  .badge-info     { @apply bg-threat-info/20 text-threat-info border border-threat-info/30; }
+
+  /* Animated scan line overlay */
+  .scan-overlay::after {
+    content: '';
+    @apply absolute inset-0 pointer-events-none;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(0, 204, 255, 0.03) 50%,
+      transparent 100%
+    );
+    animation: scanLine 4s linear infinite;
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+}

@@ -1,0 +1,87 @@
+# =============================================================================
+# CyberShield XDR — Python Dependencies
+# Pinned for reproducible production builds.
+# =============================================================================
+
+# --- Web Framework ---
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+python-multipart==0.0.12
+
+# --- Database ---
+sqlalchemy[asyncio]==2.0.36
+asyncpg==0.30.0
+alembic==1.14.0
+psycopg2-binary==2.9.10
+
+# --- Settings & Validation ---
+pydantic==2.10.3
+pydantic-settings==2.6.1
+pydantic[email]==2.10.3
+
+# --- Authentication & Security ---
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+bcrypt==4.2.1
+
+# --- Redis & Caching ---
+redis[hiredis]==5.2.1
+aioredis==2.0.1
+
+# --- Task Queue ---
+celery[redis]==5.4.0
+flower==2.0.1
+
+# --- HTTP Client ---
+httpx==0.28.1
+aiohttp==3.11.10
+
+# --- Security Scanning ---
+python-nmap==0.7.1
+scapy==2.6.1
+
+# --- Malware Analysis ---
+yara-python==4.5.1
+pefile==2024.8.26
+python-magic==0.4.27
+
+# --- Machine Learning (Phishing) ---
+scikit-learn==1.5.2
+numpy==2.1.3
+pandas==2.2.3
+joblib==1.4.2
+
+# --- AI ---
+openai==1.57.2
+
+# --- Report Generation ---
+reportlab==4.2.5
+openpyxl==3.1.5
+jinja2==3.1.4
+
+# --- Email ---
+aiosmtplib==3.0.2
+email-validator==2.2.0
+
+# --- OpenSearch ---
+opensearch-py==2.7.1
+
+# --- Utilities ---
+python-dateutil==2.9.0
+pytz==2024.2
+structlog==24.4.0
+tenacity==9.0.0
+
+# --- Testing ---
+pytest==8.3.4
+pytest-asyncio==0.24.0
+pytest-cov==6.0.0
+httpx==0.28.1
+factory-boy==3.3.1
+faker==33.1.0
+
+# --- Dev Tools ---
+black==24.10.0
+ruff==0.8.3
+mypy==1.13.0
+greenlet>=3.0.0
